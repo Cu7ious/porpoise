@@ -1,3 +1,8 @@
+header {
+    border: solid;
+    background: black;
+    color: white;
+}
 #repo-activity {
     padding: 5px;
     width: 730px;
@@ -7,7 +12,7 @@
 .repo-activity-wrapper {
     border: 1px solid #dadada;
     overflow: hidden;
-    width: 625px;
+    width: 650px;
     padding: 7px;
     border-radius: 4px;
 }

@@ -90,22 +90,14 @@ window.onload = () => {
       let {
         bio,
         company,
-        email,
         location,
         blog,
-        public_repos,
-        followers,
-        following
       } = user
 
       bio = bio ? `<p>${bio}</p>` : null
       company = company ? `<li>${company}</li>` : null
-      email = email !== 'null' ? `<li>${email}</li>` : null
       location = location ? `<li>${location}</li>` : null
       blog = blog ? `<li>${blog}</li>` : null
-      public_repos = public_repos ? `<li>${public_repos}</li>` : null
-      followers = followers ? `<li>${followers}</li>` : null
-      following = following ? `<li>${following}</li>` : null
 
       const userDiv = document.getElementById('user')
       userDiv.innerHTML = `
@@ -118,14 +110,8 @@ window.onload = () => {
         <div class="user-extras">
             <ul>
               ${company}
-              ${email}
               ${location}
               ${blog}
-            </ul>
-            <ul>
-              ${public_repos}
-              ${followers}
-              ${following}
             </ul>
         </div>
       `
@@ -179,14 +165,14 @@ window.onload = () => {
                     </a>
                   </h5>
                   <div class="tags">
-                      ${private}
-                      ${fork}
-                      ${forks}
-                      ${forks_count}
+                      <p>     private: ${private}</p>
+                      <p>     fork: ${fork}</p>
+                      <p>     forks: ${forks}</p>
+                      <p>     forks count: ${forks_count}</p>
                   </div>
                   <div class="time">
-                      ${pushed_at}
-                      ${updated_at}
+                      <p>     pushed at: ${pushed_at}</p>
+                      <p>     updated at: ${updated_at}</p>
                   </div>
                 </article>
               `
